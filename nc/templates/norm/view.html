@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block styles %}
+    <!-- Bootstrap CSS -->
+    {{ bootstrap.load_css() }}
+    <link rel="stylesheet"
+                  href="{{url_for('static', filename='view.css')}}">
+{% endblock %}
+{% block content %}
+<div class="container">
+<section class="cd-position-relative cd-z-index-1 cd-padding-y-2xl">
+  <div class="cd-container cd-max-width-adaptive-sm cd-text-center">
+    
+
+    <div>
+        {%if data:%}
+          {%for x in data:%}
+            {%if x.types=="titulo":%}
+            <h1 class="cd-margin-bottom-xs">{{x.title}}</h1>
+            {%else:%}
+            <p class="thank-you__paragraph cd-margin-bottom-xs">
+            <a href="{{url_for('norm.view_iten_sub',id = x.id)}}">
+              {{x.sub_iten}}
+            </a>
+             - {{x.description}}
+          </p>
+          {%endif%}
+          {%endfor%}
+        
+        {%endif%}
+    </div>
+  </div>
+</section>  
+</div>
+{% endblock %}
+

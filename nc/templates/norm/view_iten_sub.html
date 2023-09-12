@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block styles %}
+    <!-- Bootstrap CSS -->
+    {{ bootstrap.load_css() }}
+    <link rel="stylesheet"
+                  href="{{url_for('static', filename='view.css')}}">
+{% endblock %}
+{% block content %}
+<div class="container">
+<section class="cd-position-relative cd-z-index-1 cd-padding-y-2xl">
+  <div class="cd-container cd-max-width-adaptive-sm cd-text-center">
+    
+
+    <div>
+        {%if data:%}
+        
+          <h1 class="cd-margin-bottom-xs">{{data.iten}}</h1>
+          <p class="thank-you__paragraph cd-margin-bottom-xs">
+            {{data.sub_iten}} - {{data.description}}
+          </p>
+        {%endif%}
+        
+        <p>Ações Recomendadas</p>
+        <p>
+          <span class="badge badge-primary">Nada</span>
+         </p>
+         <p>
+
+          <a href="{{url_for('norm.add_apply', id = data.id)}}">
+
+            
+          <span class="badge">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path d="M12.75 7.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5v-3.5Z"></path><path d="M12 1c6.075 0 11 4.925 11 11s-4.925 11-11 11S1 18.075 1 12 5.925 1 12 1ZM2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5 9.5 9.5 0 0 0 2.5 12Z"></path></svg>
+          </span>
+          
+          </a> 
+         </p>
+      
+        <p>
+          <!--fazer links pagination-->
+          <a class="cd-link" href="#0">Anterior</a>
+          <span>|</span>
+          <a class="cd-link" href="#0">Próximo</a>
+        </p>
+        
+    </div>
+  </div>
+</section>  
+</div>
+{% endblock %}
+
+
+

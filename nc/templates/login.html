@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        {% block head %}
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        {% block styles %}
+            <!-- Bootstrap CSS -->
+            {{ bootstrap.load_css() }}
+            
+            <link rel="stylesheet"
+                  href="{{url_for('static', filename='login.css')}}">
+        {% endblock %}
+            
+        <title>Notas - Rosa Lux</title>
+        {% endblock %}
+    </head>
+    <body>
+      <div class="container">
+        <section class="newsletter col-md-10 nx6-padding-y-xl nx6-text-center">
+          <div class="nx6-container nx6-max-width-xs">
+            <div class="nx6-text-component nx6-margin-bottom-md">
+              <h2>Bem Vindo</h2>
+              <p>Para acesso ao painel é necessário o login.</p>
+            </div>
+
+            <form method="POST" action="./login" class="nx6-grid nx6-gap-2xs">
+              <div class="nx6-col-12">
+                <input class="nx6-form-control nx6-width-100% nx6-height-100%" aria-label="user" name="name" type="text" placeholder="User">
+              </div>
+
+              <div class="nx6-col-12">
+                <input class="nx6-form-control nx6-width-100% nx6-height-100%" aria-label="password" name="password" type="password" placeholder="Password">
+              </div>
+
+              <div class="nx6-col-12">
+                <button class="nx6-btn nx6-btn--primary nx6-width-100% nx6-height-100%">Enviar</button>
+              </div>
+            </form>
+
+
+            <div class="nx6-margin-top-xs">
+              <small class="nx6-text-xs nx6-color-contrast-medium">O inimigo não morrerá por si mesmo <a class="nx6-color-contrast-high" href="https://www.marxists.org/portugues/mao/index.htm">leia</a>.</small>
+            </div>
+          </div>
+        </section>
+        
+
+        {% block scripts %}
+            <!-- Optional JavaScript -->
+            {{ bootstrap.load_js() }}
+        {% endblock %}
+      </div>
+    </body>
+</html>
+

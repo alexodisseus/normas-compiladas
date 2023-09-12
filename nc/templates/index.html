@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block styles %}
+    <!-- Bootstrap CSS -->
+    {{ bootstrap.load_css() }}
+    <link rel="stylesheet"
+                  href="{{url_for('static', filename='index.css')}}">
+{% endblock %}
+{% block content %}
+<div class="container">
+  <div class="stories">
+  <h3 class="stories__legend">Principais tarefas</h3>
+  
+  <ol class="stories__list">
+    {%if data:%}
+    {% for x in data:%}
+      <li class="stories__story">
+      <a class="stories__img-wrapper">
+        <figure>
+          <img src="{{url_for('static', filename='img/icone.png')}}" alt="Icone tarefa">
+        </figure>
+      </a>
+      <div class="stories__text sz3-text-component sz3-line-height-md sz3-text-gap-2xs">
+        <h4 class="stories__headline">
+          <a href="{{url_for('admin.view',id = x.id)}}">{{x.title}}</a>
+        </h4>
+        <p class="stories__metadata">
+          <time datetime="2020-05-10">Maio   10, 2020</time> 
+          <span class="stories__separator" role="separator"></span> 
+          <a href="{{url_for('admin.view',id = x.id)}}">{{x.status}}</a>
+        </p>
+      </div>
+    </li>  
+    {%endfor%}
+    
+    {%else:%}
+    <li class="stories__story">
+      nada
+    </li>
+    {%endif%}
+
+
+  </ol>
+</div>
+</div>
+{% endblock %}
+
+
+{% block content2 %}
+<h1>asdsçlfmsçdlmf</h1>
+{% endblock %}

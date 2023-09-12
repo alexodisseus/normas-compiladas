@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block styles %}
+    <!-- Bootstrap CSS -->
+    {{ bootstrap.load_css() }}
+    <link rel="stylesheet"
+                  href="{{url_for('static', filename='view.css')}}">
+{% endblock %}
+{% block content %}
+<div class="container">
+<section class="cd-position-relative cd-z-index-1 cd-padding-y-2xl">
+  <div class="cd-container cd-max-width-adaptive-sm cd-text-center">
+    
+    <div>
+      <form method='post' action="./">
+        
+        <h1 class="cd-margin-bottom-xs">Cadastre o Item</h1>
+        <p class="thank-you__paragraph cd-margin-bottom-xs">Inclusão de itens na norma para consulta posterior</p>
+        <label>Item</label>
+        <input class="form-control" type="text" name="iten">
+        <br>
+        <label>Título</label>
+        <input class="form-control" type="text" name="title">
+        
+        <br>
+        <label>Categoria</label>
+        <input class="form-control" type="text" name="tag">
+        <br>
+        
+        <button type="submit" class="btn btn-primary mb-2">Cadastrar</button>  
+      </form>
+        
+    </div>
+  </div>
+</section>  
+</div>
+{% endblock %}
+
+
+{% block content2 %}
+<P>vvvvvv</P>
+{% endblock %}

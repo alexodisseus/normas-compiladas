@@ -1,0 +1,119 @@
+{% extends "base.html" %}
+
+{% block styles %}
+    <!-- Bootstrap CSS -->
+    {{ bootstrap.load_css() }}
+    <link rel="stylesheet"
+                  href="{{url_for('static', filename='index.css')}}">
+{% endblock %}
+{% block content %}
+<div class="container">
+  <h1>Normas</h1>
+  <div class="stories">
+    <div class="pos-f-t">
+      <form method="GET" action="./">
+        
+        <div class="collapse" id="navbarToggleExternalContent">
+          
+          <div class="form-group">
+          <label for="exampleInputEmail1">Filtros</label>
+          <input type="text" name="busca"  class="form-control" placeholder="Busca">
+        </div>
+          <div class="form-group">
+            
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" name="tags" value="Descrição">
+              <label class="form-check-label ">Descrição</label>
+            </div>
+              
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" name="tags" value="Infrações" >
+              <label class="form-check-label" for="inlineCheckbox2">Infrações</label>
+            </div>
+          </div>
+        
+        
+        <button type="submit" class="btn btn-primary">Aplicar</button>
+        </div>
+
+      </form>
+
+      <nav class="navbar navbar-light justify-content-end" >
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </nav>
+    </div>
+    <br>
+  <h3 class="stories__legend">NG-006</h3>
+  
+  <ol class="stories__list">
+    {%if data:%}
+    {% for x in data:%}
+
+      {% if x.types == "titulo" %}
+      <li class="stories__story" >
+      <a class="stories__img-wrapper">
+        <figure>
+          <img src="{{url_for('static', filename='img/icone.png')}}" alt="Icone tarefa">
+        </figure>
+      </a>
+      <div class="stories__text sz3-text-component sz3-line-height-md sz3-text-gap-2xs">
+        <h4 class="stories__headline">
+          <a href="{{url_for('norm.view',id = x.iten)}}">
+            {{x.iten}} - {{x.title}} 
+          </a>
+        </h4> 
+        
+        <p class="stories__metadata">
+          <span>{{x.tag}}</span>
+        </p>
+        
+      </div>  
+      </li>  
+      {%endif%}
+      {% if x.types == "subitem" %}
+      <li class="stories__story" >
+      <a class="stories__img-wrapper" style="height:10px ;">
+        <figure >
+          
+        </figure>
+      </a>
+      <div class="stories__text sz3-text-component sz3-line-height-md sz3-text-gap-2xs">
+        
+        <p class="stories__metadata">
+          
+          <span class="d-inline-block " style=" width: 290px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  
+  
+  " >
+           <a href="{{url_for('norm.view_iten_sub',id = x.id)}}">
+           {{x.iten}}- {{x.sub_iten}}
+         </a>  - {{x.description}}
+
+          </span>
+
+        </p>
+        
+      </div>  
+      </li>  
+      {%endif%}
+
+    {%endfor%}
+    
+    {%else:%}
+    <li class="stories__story">
+      Não existem itens cadastrados
+    </li>
+    {%endif%}
+
+
+  </ol>
+</div>
+</div>
+{% endblock %}
+
+
