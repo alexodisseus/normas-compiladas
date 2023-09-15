@@ -22,14 +22,14 @@
         <select class="form-control" name="iten" id="exampleFormControlSelect1">
         {% if data:%}
           {%for x in data:%}  
-          <option value="{{x.iten}}">{{x.iten}} - {{x.title}}</option>
+          <option value="{{x.id}}">{{x.iten}} - {{x.title}}</option>
           {%endfor%}
         {%endif%}
         </select>
         <br>
 
         <label>Sub-iten</label>
-        <input class="form-control" type="text" name="sub_iten">
+        <input class="form-control" type="text" name="iten_sub">
         <br>
         <label>Descrição</label>
         <textarea class="form-control" value="a" name="description" rows="2" cols="50">

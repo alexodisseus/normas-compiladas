@@ -18,11 +18,9 @@ def index():
 
 	busca = request.args.get('busca', '')
 	tags = request.args.getlist('tags')
-	print(busca)
-	print(tags)
 	
 	data = model.read_norm_list(busca , tags)
-	return render_template('norm/index.html' , data = data)
+	return render_template('norm/list.html' , data = data)
 
 
 
@@ -54,12 +52,16 @@ def create_iten_sub():
 
 	if request.method == 'POST':
 		iten = request.form['iten']
-		sub_iten = request.form['sub_iten']
+		iten_sub = request.form['iten_sub']
 		tag = request.form['tag']
-		types = "subitem"
+		
 		description = request.form['description']
+		print('asdasdasdasd')
+		print(iten)
+		print(iten_sub)
 
-		model.create_norm_iten_sub(iten,sub_iten,tag,types,description)
+		model.create_norm_iten_sub(iten,iten_sub,tag,description)
+
 		return redirect(url_for('norm.index'))
 	
 	data = model.read_norm_list_ids()

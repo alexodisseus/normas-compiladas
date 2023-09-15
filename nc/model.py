@@ -23,31 +23,29 @@ class Todo(SQLModel, table=True):
 	title: str
 	status: str = "todo"
 	person_id: int = Field(foreign_key='person.id')
-	"""
-	def __init__(self, arg):
-		super(Todo, self).__init__()
-		self.arg = arg
-	"""
-
+	
 
 
 class Norm_iten(SQLModel, table=True):
 	id: Optional[int] = Field(default=None, primary_key=True)
 	iten:str
-	sub_iten:str = Field(default=None)
+	
 	title:str = Field(default=None)
 	tag:str
-	description:str = Field(default=None)
-	types:str
-
-"""
-class Norm_iten_sub(SQLModel, table=True):
-	id: Optional[int] = Field(default=None, primary_key=True)
-	iten_sub:str
 	
-	tag:str
+	sub_iten_list: List['Norm_iten_sub']=Relationship()
+
+
+class Norm_iten_sub(SQLModel, table=True):
+	
+	id: Optional[int] = Field(default=None, primary_key=True)
+
+	iten_sub:str = Field(default=None)
+	tag:str = Field(default=None)
+	description:str = Field(default=None)
 	norm_iten_id: int = Field(foreign_key='norm_iten.id')
-"""
+
+
 
 
 
@@ -132,16 +130,22 @@ def read_user(name:str,password:str):
 
 
 #model para norm
+
 def read_norm_list(description:str=None , tags:str=None):
-	with Session(engine) as session:
-		query= select(Norm_iten)
+	with Session(engine) as session:	
+		query= select(
+			Norm_iten.title,
+			Norm_iten_sub
+			).join(Norm_iten_sub)
+
 		if description:
-			query = query.where( Norm_iten.description.contains(description))
-		if tags != []:
+			query = query.where( Norm_iten_sub.description.contains(description))
+		if tags and tags != []:
 			for x in tags:
-				query = query.where( Norm_iten.tag == x)
+				query = query.where( Norm_iten_sub.tag == x)
 
 		data = session.exec(query).all()
+		print(data.index(data[0]))
 		return data
 
 
@@ -150,9 +154,7 @@ def read_norm_list_ids():
 		query= select(
 			Norm_iten.iten,
 			Norm_iten.title, 
-			Norm_iten.id).where(
-			Norm_iten.sub_iten ==None
-			)
+			Norm_iten.id)
 		
 		data = session.exec(query).all()
 		return data
@@ -188,10 +190,18 @@ def create_norm_iten(iten:str, title:str, types:str , tag:str ):
 		session.commit()
 
 
-def create_norm_iten_sub(iten:str,sub_iten:str, tag:str,types:str, description:str ):
+def create_norm_iten_sub(iten:str,iten_sub:str, tag:str, description:str ):
 	with Session(engine) as session:
-		session.add(Norm_iten(iten = iten,sub_iten=sub_iten, tag=tag,types=types, description=description ))
+		session.add(
+			Norm_iten_sub(
+				norm_iten_id = iten,
+				iten_sub=iten_sub, 
+				tag=tag, 
+				description=description
+				))
+
 		session.commit()
+
 
 
 

@@ -15,7 +15,8 @@ app = Flask(__name__)
 app.config['TITLE'] = "Normas Compiladas"
 app.secret_key = b'guerra aos senhores'
 
-asdmin.configure(app)
+
+admin.configure(app)
 nr.configure(app)
 db.configure(app)
 Bootstrap4(app)
