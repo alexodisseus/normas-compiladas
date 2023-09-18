@@ -134,9 +134,9 @@ def read_user(name:str,password:str):
 def read_norm_list(description:str=None , tags:str=None):
 	with Session(engine) as session:	
 		query= select(
-			Norm_iten,
-			Norm_iten_sub
-			).join(Norm_iten_sub)
+			Norm_iten_sub,
+			Norm_iten
+			).join(Norm_iten)
 
 		if description:
 			query = query.where( Norm_iten_sub.description.contains(description))

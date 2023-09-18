@@ -20,7 +20,15 @@ def index():
 	tags = request.args.getlist('tags')
 	
 	data = model.read_norm_list(busca , tags)
-	return render_template('norm/list.html' , data = data)
+
+	item = []
+	for x in data:
+		if x[1] in item:
+			pass
+		else:
+			item.append(x[1])
+			
+	return render_template('norm/list.html' , data = data , item=item)
 
 
 
