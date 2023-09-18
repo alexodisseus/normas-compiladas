@@ -46,12 +46,30 @@
     </div>
     <br>
     <p>
-    {%if data:%}
-      {% for x in data:%}
-        <p>{{x[0]}}</p>
+      <div class="accordion" id="accordionExample">
+        {%if data:%}
+          {% for x in data:%}
+        <div class="card">
+          <div class="card-header" id="headingOne">
+            <h5 class="mb-0">
+              <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#asd{{x[1].id}}"  aria-controls="collapseOne">
+                {{x[0].iten}} - {{x[1].iten_sub}} - {{x[0].title}}
+              </button>
+            </h5>
+          </div>
+
+          <div id="asd{{x[1].id}}" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+            <div class="card-body">
+              {{x[1].description}}
+              
+            </div>
+          </div>
+        </div>
 
       {%endfor%}
     {%endif%}
+      </div>
+       
 
 
     </p>

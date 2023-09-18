@@ -134,7 +134,7 @@ def read_user(name:str,password:str):
 def read_norm_list(description:str=None , tags:str=None):
 	with Session(engine) as session:	
 		query= select(
-			Norm_iten.title,
+			Norm_iten,
 			Norm_iten_sub
 			).join(Norm_iten_sub)
 
@@ -145,7 +145,7 @@ def read_norm_list(description:str=None , tags:str=None):
 				query = query.where( Norm_iten_sub.tag == x)
 
 		data = session.exec(query).all()
-		print(data.index(data[0]))
+		
 		return data
 
 
