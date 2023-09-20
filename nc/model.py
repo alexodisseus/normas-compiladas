@@ -135,7 +135,8 @@ def read_norm_list(description:str=None , tags:str=None):
 	with Session(engine) as session:	
 		query= select(
 			Norm_iten_sub,
-			Norm_iten
+			Norm_iten.title,
+			Norm_iten.iten
 			).join(Norm_iten)
 
 		if description:

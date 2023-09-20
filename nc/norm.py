@@ -27,7 +27,7 @@ def index():
 			pass
 		else:
 			item.append(x[1])
-			
+	
 	return render_template('norm/list.html' , data = data , item=item)
 
 
