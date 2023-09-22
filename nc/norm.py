@@ -18,9 +18,12 @@ def index():
 
 	busca = request.args.get('busca', '')
 	tags = request.args.getlist('tags')
+	page = request.args.get('page')
 	
-	data = model.read_norm_list(busca , tags)
+	
+	data = model.read_norm_list(busca , tags , page)
 
+	pagination = []
 	item = []
 	for x in data:
 		if x[1] in item:
@@ -28,7 +31,11 @@ def index():
 		else:
 			item.append(x[1])
 	
-	return render_template('norm/list.html' , data = data , item=item)
+
+	return render_template('norm/list.html' , 
+		data = data , 
+		item=item , 
+		pagination = pagination)
 
 
 

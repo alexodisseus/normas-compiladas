@@ -131,7 +131,7 @@ def read_user(name:str,password:str):
 
 #model para norm
 
-def read_norm_list(description:str=None , tags:str=None,page:str = None):
+def read_norm_list(description:str=None , tags:str=None, page:str = None):
 	with Session(engine) as session:	
 		query= select(
 			Norm_iten_sub,
@@ -144,9 +144,12 @@ def read_norm_list(description:str=None , tags:str=None,page:str = None):
 		if tags and tags != []:
 			for x in tags:
 				query = query.where( Norm_iten_sub.tag == x)
+		
 		if page:
 			index = 10
-			query = query.offset(page+index).limit(index)
+			query = query.offset(page).limit(index)
+
+			print(query)
 			
 
 		data = session.exec(query).all()
