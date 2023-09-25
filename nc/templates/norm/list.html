@@ -7,6 +7,7 @@
                   href="{{url_for('static', filename='index.css')}}">
 {% endblock %}
 {% block content %}
+{{ pagination}}
 <div class="container">
   <h1>Normas</h1>
   <div class="stories">
@@ -88,9 +89,11 @@
         <span class="sr-only">Previous</span>
       </a>
     </li>
+    
     <li class="page-item"><a class="page-link" href="#">1</a></li>
     <li class="page-item"><a class="page-link" href="#">2</a></li>
     <li class="page-item"><a class="page-link" href="#">3</a></li>
+    
     <li class="page-item">
       <a class="page-link" href="#" aria-label="Next">
         <span aria-hidden="true">&raquo;</span>

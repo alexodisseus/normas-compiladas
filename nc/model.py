@@ -1,6 +1,6 @@
 from typing import Optional, List
 from sqlmodel import SQLModel , Field, create_engine, Session, select, Relationship
-
+from sqlalchemy import func
 
 db = SQLModel()
 
@@ -136,7 +136,7 @@ def read_norm_list(description:str=None , tags:str=None, page:str = None):
 		query= select(
 			Norm_iten_sub,
 			Norm_iten.title,
-			Norm_iten.iten
+			Norm_iten.iten,
 			).join(Norm_iten)
 
 		if description:
@@ -149,13 +149,29 @@ def read_norm_list(description:str=None , tags:str=None, page:str = None):
 			index = 10
 			query = query.offset(page).limit(index)
 
-			print(query)
+		else:
+			index = 10
+			query = query.limit(index)
+
 			
 
 		data = session.exec(query).all()
 		
 		return data
+def read_norm_list_count(description:str=None , tags:str=None):
+	with Session(engine) as session:	
+		query= select([func.count(Norm_iten_sub.id)])
 
+		if description:
+			query = query.where( Norm_iten_sub.description.contains(description))
+		if tags and tags != []:
+			for x in tags:
+				query = query.where( Norm_iten_sub.tag == x)
+		
+
+		data = session.exec(query).all()
+		
+		return data
 
 def read_norm_list_ids():
 	with Session(engine) as session:

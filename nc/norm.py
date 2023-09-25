@@ -22,8 +22,16 @@ def index():
 	
 	
 	data = model.read_norm_list(busca , tags , page)
+	
+	count =  model.read_norm_list_count(busca , tags)
 
-	pagination = []
+	pagination={}
+	pagination['tags']= tags
+	pagination['page']= page
+	pagination['busca']= busca
+	pagination['count']= count
+
+	
 	item = []
 	for x in data:
 		if x[1] in item:
