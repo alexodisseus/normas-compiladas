@@ -18,8 +18,10 @@ def index():
 
 	busca = request.args.get('busca', '')
 	tags = request.args.getlist('tags')
-	page = request.args.get('page')
+	page = int(request.args.get('page')) if request.args.get('page') else 0
 	
+	if page<0:
+		page=0
 	
 	data = model.read_norm_list(busca , tags , page)
 	
@@ -39,7 +41,11 @@ def index():
 		else:
 			item.append(x[1])
 	
+	print(pagination['page'])
+	if pagination['page'] ==None:
+		pagination['page'] = 0
 
+		pass
 	return render_template('norm/list.html' , 
 		data = data , 
 		item=item , 

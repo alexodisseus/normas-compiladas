@@ -81,27 +81,48 @@
       {%endfor%}
     {%endif%}
       </div>
+      {%if pagination.count[0]>9: %}
        <nav aria-label="Page navigation example">
-  <ul class="pagination justify-content-center">
-    <li class="page-item">
-      <a class="page-link" href="#" aria-label="Previous">
-        <span aria-hidden="true">&laquo;</span>
-        <span class="sr-only">Previous</span>
-      </a>
-    </li>
-    
-    <li class="page-item"><a class="page-link" href="#">1</a></li>
-    <li class="page-item"><a class="page-link" href="#">2</a></li>
-    <li class="page-item"><a class="page-link" href="#">3</a></li>
-    
-    <li class="page-item">
-      <a class="page-link" href="#" aria-label="Next">
-        <span aria-hidden="true">&raquo;</span>
-        <span class="sr-only">Next</span>
-      </a>
-    </li>
-  </ul>
-</nav>
+        <ul class="pagination justify-content-center">
+          
+          {%if pagination.page or pagination.page == '0': %}
+          <li class="page-item ">
+            <a class="page-link" href="{{
+              url_for('norm.index', page=pagination.page-10,
+              busca=pagination.busca,
+              tags = pagination.tags)
+            }}" aria-label="Previous">
+
+              <span aria-hidden="true">&laquo;</span>
+              <span class="sr-only">Previous</span>
+            </a>
+          </li>
+          {%else:%}
+          <li class="page-item disabled">
+            <a class="page-link" href="#" aria-label="Previous">
+              <span aria-hidden="true">&laquo;</span>
+              <span class="sr-only">Previous</span>
+            </a>
+          </li>
+          {%endif%}
+          
+          <li class="page-item"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          
+          <li class="page-item">
+            <a class="page-link" href="{{
+              url_for('norm.index', page=pagination.page+10,
+               busca=pagination.busca,
+               tags = pagination.tags)
+            }}" aria-label="Next">
+              <span aria-hidden="true">&raquo;</span>
+              <span class="sr-only">Next</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      {%endif%}
 
 
     </p>
