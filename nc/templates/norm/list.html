@@ -7,7 +7,6 @@
                   href="{{url_for('static', filename='index.css')}}">
 {% endblock %}
 {% block content %}
-{{ pagination}}
 <div class="container">
   <h1>Normas</h1>
   <div class="stories">
@@ -23,12 +22,22 @@
           <div class="form-group">
             
             <div class="form-check form-check-inline">
+              {%if 'Descrição' in pagination.tags: %}
+              <input class="form-check-input" type="checkbox" name="tags" value="Descrição" checked>
+              {%else:%}
               <input class="form-check-input" type="checkbox" name="tags" value="Descrição">
+              {%endif%}
+
+              
               <label class="form-check-label ">Descrição</label>
             </div>
               
             <div class="form-check form-check-inline">
+              {%if 'Infrações' in pagination.tags: %}
+              <input class="form-check-input" type="checkbox" name="tags" value="Infrações" checked>
+              {%else:%}
               <input class="form-check-input" type="checkbox" name="tags" value="Infrações" >
+              {%endif%}
               <label class="form-check-label" for="inlineCheckbox2">Infrações</label>
             </div>
           </div>
@@ -106,7 +115,14 @@
           </li>
           {%endif%}
           {%for x in range(pagination.count[0]//10+1)%}
-          <li class="page-item"><a class="page-link" href="#">{{x+1}}</a></li>
+          <li class="page-item">
+            <a class="page-link" href="{{
+              url_for('norm.index', page=x*10,
+               busca=pagination.busca,
+               tags = pagination.tags) }}">
+               {{x+1}}
+           </a>
+         </li>
           {%endfor%}
 
 

@@ -1,5 +1,5 @@
 from typing import Optional, List
-from sqlmodel import SQLModel , Field, create_engine, Session, select, Relationship
+from sqlmodel import SQLModel ,or_, Field, create_engine, Session, select, Relationship
 from sqlalchemy import func
 
 db = SQLModel()
@@ -142,8 +142,8 @@ def read_norm_list(description:str=None , tags:str=None, page:str = None):
 		if description:
 			query = query.where( Norm_iten_sub.description.contains(description))
 		if tags and tags != []:
-			for x in tags:
-				query = query.where( Norm_iten_sub.tag == x)
+			
+			query = query.where( or_(Norm_iten_sub.tag == x for x in tags))
 		
 		if page:
 			index = 10
@@ -165,10 +165,9 @@ def read_norm_list_count(description:str=None , tags:str=None):
 		if description:
 			query = query.where( Norm_iten_sub.description.contains(description))
 		if tags and tags != []:
-			for x in tags:
-				query = query.where( Norm_iten_sub.tag == x)
+			query = query.where(or_( Norm_iten_sub.tag == x for x in tags))
 		
-
+		print(query)
 		data = session.exec(query).all()
 		
 		return data
