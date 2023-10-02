@@ -167,7 +167,7 @@ def read_norm_list_count(description:str=None , tags:str=None):
 		if tags and tags != []:
 			query = query.where(or_( Norm_iten_sub.tag == x for x in tags))
 		
-		print(query)
+		
 		data = session.exec(query).all()
 		
 		return data
@@ -200,9 +200,10 @@ def read_norm_iten_view(iten:str):
 
 def read_norm_iten_sub_view(id:str):
 	with Session(engine) as session:
-		query= select(Norm_iten_sub).where(Norm_iten_sub.id == id)
+		query= select(Norm_iten_sub,Norm_iten).join(Norm_iten).where(Norm_iten_sub.id == id)
 		
 		data = session.exec(query).first()
+
 		return data
 
 		
@@ -226,6 +227,17 @@ def create_norm_iten_sub(iten:str,iten_sub:str, tag:str, description:str ):
 		session.commit()
 
 
+def norm_list_aplly():
+	with Session(engine) as session:
+		query= select(To_apply)
+		
+		data = session.exec(query).all()
 
+		return data
+def norm_aplly_add(name:str,norm_iten_id:str,person_id:str):
+	with Session(engine) as session:
+		session.add(To_apply(name = name, norm_iten_id=norm_iten_id ,person_id=person_id))
+		session.commit()
+		
 
 

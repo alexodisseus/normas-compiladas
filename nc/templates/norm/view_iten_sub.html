@@ -15,9 +15,10 @@
     <div>
         {%if data:%}
         
-          <h1 class="cd-margin-bottom-xs">{{data.iten}}</h1>
+        
+          <h1 class="cd-margin-bottom-xs">{{data[1].iten}} - {{data[1].title}}</h1>
           <p class="thank-you__paragraph cd-margin-bottom-xs">
-            {{data.sub_iten}} - {{data.description}}
+            {{data[1].iten}} - {{data[0].iten_sub}} - {{data[0].description}}
           </p>
         {%endif%}
         
@@ -27,7 +28,7 @@
          </p>
          <p>
 
-          <a href="{{url_for('norm.add_apply', id = data.id)}}">
+          <a href="{{url_for('norm.add_apply', id = data[1].id)}}">
 
             
           <span class="badge">

@@ -41,7 +41,6 @@ def index():
 		else:
 			item.append(x[1])
 	
-	print(pagination['page'])
 	if pagination['page'] ==None:
 		pagination['page'] = 0
 
@@ -85,9 +84,7 @@ def create_iten_sub():
 		tag = request.form['tag']
 		
 		description = request.form['description']
-		print('asdasdasdasd')
-		print(iten)
-		print(iten_sub)
+		
 
 		model.create_norm_iten_sub(iten,iten_sub,tag,description)
 
@@ -100,8 +97,7 @@ def create_iten_sub():
 @norm.route('/add_apply/<id>', methods = ['GET','POST'])
 def add_apply(id):
 	
-	print(id)
-
+	
 	if 'username' not in session:
 		return redirect(url_for('admin.login'))
 
@@ -110,11 +106,16 @@ def add_apply(id):
 		norm_id = request.form['id']
 		
 
-		model.add_apply()
+		model.norm_aplly_add()
+
 		return redirect(url_for('norm.view_iten_sub', id=norm_id))
 	
-	data = model.read_norm_list_ids()
-	return render_template('norm/add_apply.html' , data=data)
+	iten = model.read_norm_iten_sub_view(id)
+	data = model.norm_list_aplly()
+	print(data)
+	return render_template('norm/add_apply.html' , data=data , iten=iten)
+
+
 
 
 @norm.route('/view/<id>', methods = ['GET','POST'])

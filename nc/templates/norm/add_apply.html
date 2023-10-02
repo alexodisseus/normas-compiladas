@@ -12,33 +12,28 @@
   <div class="cd-container cd-max-width-adaptive-sm cd-text-center">
     
     <div>
-      <form method='post' action="./">
+      <form method='POST' action="./{{iten[1].id}}">
         
-        <h1 class="cd-margin-bottom-xs">Cadastre o Item</h1>
-        <p class="thank-you__paragraph cd-margin-bottom-xs">Inclusão de itens na norma para consulta posterior</p>
+        <h1 class="cd-margin-bottom-xs">Incluir ação em:</h1>
+        <p class="thank-you__paragraph cd-margin-bottom-xs">
+          {{iten[1].iten}} - {{iten[0].iten_sub}}
+        </p>
         <label>Item</label>
         
         
-        <select class="form-control" name="iten" id="exampleFormControlSelect1">
+        {{data}}
         {% if data:%}
           {%for x in data:%}  
-          <option value="{{x.iten}}">{{x.iten}} - {{x.title}}</option>
+          <p>{{x}}</p>
+          
           {%endfor%}
         {%endif%}
-        </select>
         <br>
 
-        <label>Sub-iten</label>
+        <label>Ação para adicionar</label>
         <input class="form-control" type="text" name="sub_iten">
         <br>
-        <label>Descrição</label>
-        <textarea class="form-control" value="a" name="description" rows="2" cols="50">
-          
-        </textarea>
-        <br>
-        <label>Categoria</label>
-        <input class="form-control" type="text" name="tag">
-        <br>
+
         
         <button type="submit" class="btn btn-primary mb-2">Cadastrar</button>  
       </form>
