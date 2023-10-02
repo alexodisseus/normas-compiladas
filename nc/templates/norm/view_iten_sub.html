@@ -13,6 +13,7 @@
     
 
     <div>
+
         {%if data:%}
         
         
@@ -24,7 +25,15 @@
         
         <p>Ações Recomendadas</p>
         <p>
+          {%if acao:%}
+            {% for x in acao:%}
+              <span class="badge badge-primary"> {{x.name}}</span>
+            {%endfor%}
+          {%else:%}
           <span class="badge badge-primary">Nada</span>
+          {%endif%}
+
+          
          </p>
          <p>
 

@@ -227,13 +227,14 @@ def create_norm_iten_sub(iten:str,iten_sub:str, tag:str, description:str ):
 		session.commit()
 
 
-def norm_list_aplly():
+def norm_list_aplly(id:str):
 	with Session(engine) as session:
-		query= select(To_apply)
+		query= select(To_apply).where(To_apply.norm_iten_id == id)
 		
 		data = session.exec(query).all()
-
 		return data
+
+
 def norm_aplly_add(name:str,norm_iten_id:str,person_id:str):
 	with Session(engine) as session:
 		session.add(To_apply(name = name, norm_iten_id=norm_iten_id ,person_id=person_id))

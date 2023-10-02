@@ -103,18 +103,16 @@ def add_apply(id):
 
 	if request.method == 'POST':
 
-		norm_id = request.form['id']
-		
+		name = request.form['acao']
 
-		model.norm_aplly_add()
+		model.norm_aplly_add(name,id,session['userid'])
 
-		return redirect(url_for('norm.view_iten_sub', id=norm_id))
+		return redirect(url_for('norm.view_iten_sub', id=id))
 	
 	iten = model.read_norm_iten_sub_view(id)
 	data = model.norm_list_aplly()
 	print(data)
 	return render_template('norm/add_apply.html' , data=data , iten=iten)
-
 
 
 
@@ -127,14 +125,18 @@ def view(id):
 	
 	return render_template('norm/view.html' , data=data)
 
+
+
 @norm.route('/view_iten_sub/<id>', methods = ['GET','POST'])
 def view_iten_sub(id):
 	if 'username' not in session:
 		return redirect(url_for('admin.login'))
 
 	data = model.read_norm_iten_sub_view(id)
+
+	acao = model.norm_list_aplly(id)
 	
-	return render_template('norm/view_iten_sub.html' , data=data)
+	return render_template('norm/view_iten_sub.html' , data=data , acao=acao)
 
 
 
