@@ -12,22 +12,26 @@
   <div class="cd-container cd-max-width-adaptive-sm cd-text-center">
     
     <div>
-      <form method='POST' action="./{{iten[1].id}}">
+      <form method='POST' action="./{{iten[0].id}}">
         
         <h1 class="cd-margin-bottom-xs">Incluir ação em:</h1>
+        
         <p class="thank-you__paragraph cd-margin-bottom-xs">
-          {{iten[1].iten}} - {{iten[0].iten_sub}}
+          Item: {{iten[1].iten}} - {{iten[0].iten_sub}}
         </p>
-        <label>Item</label>
         
         
-        {{data}}
-        {% if data:%}
-          {%for x in data:%}  
-          <p>{{x}}</p>
+        <p>
+          {%if data:%}
+            {% for x in data:%}
+              <span class="badge badge-primary"> {{x.name}}</span>
+            {%endfor%}
+          {%else:%}
+          <span class="badge badge-primary">Nada</span>
+          {%endif%}
+
           
-          {%endfor%}
-        {%endif%}
+         </p>
         <br>
 
         <label>Ação para adicionar</label>

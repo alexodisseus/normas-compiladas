@@ -104,13 +104,13 @@ def add_apply(id):
 	if request.method == 'POST':
 
 		name = request.form['acao']
-
+		
 		model.norm_aplly_add(name,id,session['userid'])
 
 		return redirect(url_for('norm.view_iten_sub', id=id))
 	
 	iten = model.read_norm_iten_sub_view(id)
-	data = model.norm_list_aplly()
+	data = model.norm_list_aplly(id)
 	print(data)
 	return render_template('norm/add_apply.html' , data=data , iten=iten)
 
