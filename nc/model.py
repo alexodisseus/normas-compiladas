@@ -241,4 +241,9 @@ def norm_aplly_add(name:str,norm_iten_id:str,person_id:str):
 		session.commit()
 		
 
+def add_norm_mult(data):
+	with Session(engine) as session:
+		session.add(data)
+		session.commit()
+		
 
