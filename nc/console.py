@@ -1,84 +1,142 @@
 import model
 asd = model
-data = ["""Os equipamentos de varejo são administrados pela CEAGESP e operacionalizados pelo
-DEPEC/SECME em se tratando de equipamentos instalados no ETSP e pela Unidade
-quando instalados nos Entrepostos do Interior.""" , """Os equipamentos de varejo permitem disponibilizar ao consumidor final produtos a preços
-mais acessíveis e com padrões mínimos de qualidade estabelecidos pela CEAGESP.""", """A concessão de uso dos equipamentos de varejo será outorgada mediante a celebração
-de CCRU, precedida de licitação nos termos da legislação própria.""" , """O CCRU/TPRU não assegura ao concessionário/permissionário exclusividade de venda
-de quaisquer produtos.""",
-"""Os equipamentos de varejo vagos poderão ser ocupados provisoriamente em regime de
-Autorização de Uso até a realização de procedimento licitatório, momento em que a
-autorização será cancelada por solicitação da CEAGESP para atribuição ao vencedor do
-certame""",
-"""Será cancelado por motivo de abandono o Instrumento Contratual do
-concessionário/permissionário/autorizatário varejista que não comparecer por 4 (quatro)
-semanas consecutivas contadas a partir da data da primeira ausência, devendo ser
-previamente comunicado ao DEPEC ou DEINT que, por meio da SAEXE ou Unidade,
-solicitará a justificativa do abandono.""",
-"""A justificativa da ausência do concessionário/permissionário/autorizatário no local de
-comercialização está condicionada à análise e deferimento do DEPEC e DEINT."""
-,
+data = [
 """
-As faltas não justificadas ou com justificativa não aceita pela CEAGESP motivará a
-penalização do concessionário/permissionário/autorizatário que será aplicada conforme
-segue:
-a) 1ª (primeira) falta: tolerância;
-b) 2ª (segunda) falta consecutiva: advertência;
-c)
-3ª (terceira) falta consecutiva: multa no valor de 1 (uma) remuneração mensal relativa
-à banca/grupo de bancas;
-d) 4ª (quarta) falta consecutiva: multa no valor de 1 (um) remuneração mensal relativa à
-banca/grupo de bancas e cancelamento do Instrumento Contratual."""
-,
-"""
-Os equipamentos de varejo serão formados por bancas com padrões, medidas e leiaute
-fixados pelo DEPEC e DEINT.
+A AU - Autorização de Uso é instrumento de caráter precário, utilizado pela CEAGESP para
+autorizar a ocupação e o uso provisório de suas áreas pelo prazo máximo de 180 (cento e
+oitenta) dias e será encerrado sempre no último dia do mês. Se verificada a possibilidade do
+prazo ultrapassar o determinado, o vencimento será antecipado para o último dia do mês
+anterior à outorga da AU.
 """
 ,
 """
-Todas as informações relativas ao tamanho e padronização dos equipamentos de varejo,
-leiaute de instalação, horário de funcionamento e uniforme utilizado ficarão à disposição
-dos concessionários/permissionários no DEPEC, por meio da SECME, e nas Unidades.
+A CEAGESP divulgará aos interessados a relação de áreas disponíveis para AU no
+endereço eletrônico www.ceagesp.gov.br
+"""
+,
 
 """
-,
-"""
-Observando a setorização dos equipamentos de varejo, serão considerados os seguintes
-grupos de produtos:
-Frutas em geral: nacionais e importadas, exceto coco verde e banana;
-Coco verde;
-Banana;
-Verduras: hortaliças herbáceas, ou seja, vegetais cujas partes consumidas estão
-acima do solo, podendo ser incluídas, excepcionalmente, as hortaliças tuberosas
-cujas partes consumidas crescem dentro do solo, desde que acompanhadas de suas
-respectivas folhas e comercializadas em maços;
-Legumes: hortaliças que produzem frutos comestíveis, ou cujas partes alimentícias
-são subterrâneas como as raízes, caules modificados, dentre outros, exceto batata,
-cebola e alho;
-Batata, cebola e alho;
-Abóboras: seca, moranga e japonesa;
-Flores de corte;
-Mudas e plantas ornamentais;
-Artigos de floricultura;
-Ovos;
-Aves abatidas e vísceras bovinas;
-Pescado;
-Mercearia seca: cereais, leguminosas, frutas secas e correlatas;
-Laticínios;
-Alimentação;
-Artesanato.
+Ocorrida a outorga de AU, será obrigatória a abertura de procedimento licitatório pelo
+DEPEC ou DEINT para a área autorizada.
 """
 ,
 """
-Poderá ser autorizada, a critério do DEPEC ou DEINT, a venda de outros produtos, desde
-que observados os parâmetros fixados pela CEAGESP.
+Na ocorrência de procedimento licitatório da área em uso em regime de AU, a autorização
+concedida será cancelada por solicitação da CEAGESP para atribuição ao vencedor do
+certame.
+"""
+,
+
+"""
+A CEAGESP poderá autorizar a renovação da AU por mais um período de 180 (cento e
+oitenta) dias.
 """
 ,
 """
-O DEPEC ou a Gerência da Unidade poderá, quando necessário, remanejar os
-concessionários/permissionários e seus equipamentos de varejo, obedecendo a
-setorização previamente elaborada para o equipamento.
+
+Se necessário, uma segunda renovação da AU poderá ser autorizada desde que seja:
+a)
+comprovada a abertura de procedimento licitatório para atribuição da área em CCRU;
+b)
+estabelecido o período de uso provisório da área até a conclusão do procedimento
+licitatório;
+c)
+condicionada à apresentação de justificativa pelo departamento responsável, DEPEC
+ou DEINT;
+d)
+referendado pela DIOPE.
 """
+,
+"""
+A comercialização ou desenvolvimento de atividades atípicas em regime de AU em área
+com metragem igual ou superior a 200 m2 (duzentos metros quadrados) será considerada
+operação de grande vulto cuja outorga a pessoas jurídicas observará as condições
+seguintes:
+a)
+realização de visita técnica pelos interessados, se for o caso;
+b)
+apresentação de atestado de capacitação técnica;
+c)
+entrega de documentação exigida.
+"""
+,
+"""
+A AU poderá ser revogada a qualquer momento por solicitação da CEAGESP ou do
+autorizatário.
+"""
+,
+"""
+A área disponibilizada em procedimento licitatório que não apresentou ganhador do certame
+retornará para uso em regime de AU até a realização de novo certame.
+"""
+,
+"""
+Para concessionários e permissionários em final de contrato, somente será autorizada AU
+em razão da necessidade de se manter a área ocupada, ou seja, se o DEPEC ou DEINT
+tenha iniciado novo processo licitatório nos 6 (seis) meses anteriores ao término do referido
+contrato e que, por quaisquer motivos, a licitação apresentou-se fracassada ou deserta.
+"""
+,
+"""
+Em caso de encerramento da AU a pedido da CEAGESP, será concedido ao autorizatário o
+prazo de até 2 (dois) dias úteis para desocupação da área. Após este prazo a mercadoria e
+equipamentos encontrados no local serão apreendidos.
+"""
+,
+"""
+Considerando o período de deterioração dos produtos, o prazo máximo para a retirada da
+mercadoria apreendida, que contará a partir da data e horário da apreensão, será:
+a) Hortifrutigranjeiros (exceto verduras): 24 (vinte e quatro) horas;
+b) Verduras: 12 (doze) horas;
+c) Flores: 12 (doze) horas;
+d) Grãos: 24 (vinte e quatro) horas;
+e) Pescados: 24 (vinte e quatro) horas armazenados em câmara (resfriados/congelados);
+f)
+Produtos Atípicos perecíveis: 01 (uma) hora;
+g) Produtos Atípicos não perecíveis: 24 (vinte e quatro) horas;
+h) Produtos ligados à floricultura: 24 (vinte e quatro) horas;
+i)
+Aparelhos eletrônicos, móveis ou utensílios: 15 (quinze) dias úteis.
+"""
+,
+"""
+As mercadorias perecíveis não retiradas pelo proprietário no prazo determinado serão
+consideradas abandonadas e, portanto, encaminhadas ao Banco de Alimentos da
+CEAGESP.
+"""
+,
+"""
+As mercadorias não perecíveis e/ou utensílios não retirados no prazo determinado serão
+considerados abandonados e, portanto, propriedade da CEAGESP que deliberará sobre a
+sua destinação, podendo integrar o patrimônio da Companhia, serem leiloados ou doados a
+entidades públicas.
+"""
+,
+"""
+No encerramento da AU, se constatadas benfeitorias realizadas na área, estas serão
+incorporadas ao patrimônio da CEAGESP não cabendo ao autorizatário direito à retenção,
+indenização ou compensação.
+"""
+,
+"""
+Não será permitido o uso parcial de áreas em regime de AU.
+"""
+,
+
+"""
+A autorização concedida para uso de áreas da CEAGESP em regime de AU é pessoal e
+intransferível ficando, portanto, proibido ceder ou transferir a terceiros. Na inobservância
+desta regra a autorização será cancelada e o autorizatário ficará impedido de utilizar outra
+área nesta modalidade.
+"""
+,
+"""
+Para o desenvolvimento de suas atividades, os autorizatários estão sujeitos as mesmas
+condições estabelecidas no presente Regulamento para os concessionários e
+permissionários dos Entrepostos.
+"""
+
+
 ]
 d = 1
 for x in data:
@@ -86,8 +144,10 @@ for x in data:
 
 		iten_sub=str(d),
 		tag="Descrição",
-		description= x.rstrip('\n'),
-		norm_iten_id= 9
+		description= x.replace('\n', ''),
+		norm_iten_id= 15
 		)
+	#print(norm_iten)
 	d+=1
+
 	asd.add_norm_mult(norm_iten)
