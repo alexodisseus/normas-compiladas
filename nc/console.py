@@ -2,140 +2,193 @@ import model
 asd = model
 data = [
 """
-A AU - Autorização de Uso é instrumento de caráter precário, utilizado pela CEAGESP para
-autorizar a ocupação e o uso provisório de suas áreas pelo prazo máximo de 180 (cento e
-oitenta) dias e será encerrado sempre no último dia do mês. Se verificada a possibilidade do
-prazo ultrapassar o determinado, o vencimento será antecipado para o último dia do mês
-anterior à outorga da AU.
+Alteração cadastral é qualquer alteração relativa às informações do concessionário/
+permissionário no cadastro da Companhia e será precedida de solicitação formal do
+interessado junto à CEAGESP no prazo de 10 (dez) dias úteis, contados a partir da data do
+registro da respectiva alteração.
 """
 ,
 """
-A CEAGESP divulgará aos interessados a relação de áreas disponíveis para AU no
-endereço eletrônico www.ceagesp.gov.br
-"""
-,
-
-"""
-Ocorrida a outorga de AU, será obrigatória a abertura de procedimento licitatório pelo
-DEPEC ou DEINT para a área autorizada.
-"""
-,
-"""
-Na ocorrência de procedimento licitatório da área em uso em regime de AU, a autorização
-concedida será cancelada por solicitação da CEAGESP para atribuição ao vencedor do
-certame.
-"""
-,
-
-"""
-A CEAGESP poderá autorizar a renovação da AU por mais um período de 180 (cento e
-oitenta) dias.
-"""
-,
-"""
-
-Se necessário, uma segunda renovação da AU poderá ser autorizada desde que seja:
-a)
-comprovada a abertura de procedimento licitatório para atribuição da área em CCRU;
-b)
-estabelecido o período de uso provisório da área até a conclusão do procedimento
-licitatório;
+A CEAGESP, por meio do DEPEC/SAEXE ou DEINT/SAEXI, procederá às alterações
+cadastrais nos seguintes casos:
+a) alteração da razão social para inclusão ou exclusão de partes relativas ao ramo de
+atividades como, por exemplo, exportação, importação, comércio, indústria, transporte,
+alimentos, flores, frutas, verduras e etc;
+b) alteração da razão social por imposição legal ou decisão judicial, mediante apresentação
+de documento comprobatório do veto da razão social proposta;
 c)
-condicionada à apresentação de justificativa pelo departamento responsável, DEPEC
-ou DEINT;
-d)
-referendado pela DIOPE.
-"""
-,
-"""
-A comercialização ou desenvolvimento de atividades atípicas em regime de AU em área
-com metragem igual ou superior a 200 m2 (duzentos metros quadrados) será considerada
-operação de grande vulto cuja outorga a pessoas jurídicas observará as condições
-seguintes:
-a)
-realização de visita técnica pelos interessados, se for o caso;
-b)
-apresentação de atestado de capacitação técnica;
-c)
-entrega de documentação exigida.
-"""
-,
-"""
-A AU poderá ser revogada a qualquer momento por solicitação da CEAGESP ou do
-autorizatário.
-"""
-,
-"""
-A área disponibilizada em procedimento licitatório que não apresentou ganhador do certame
-retornará para uso em regime de AU até a realização de novo certame.
-"""
-,
-"""
-Para concessionários e permissionários em final de contrato, somente será autorizada AU
-em razão da necessidade de se manter a área ocupada, ou seja, se o DEPEC ou DEINT
-tenha iniciado novo processo licitatório nos 6 (seis) meses anteriores ao término do referido
-contrato e que, por quaisquer motivos, a licitação apresentou-se fracassada ou deserta.
-"""
-,
-"""
-Em caso de encerramento da AU a pedido da CEAGESP, será concedido ao autorizatário o
-prazo de até 2 (dois) dias úteis para desocupação da área. Após este prazo a mercadoria e
-equipamentos encontrados no local serão apreendidos.
-"""
-,
-"""
-Considerando o período de deterioração dos produtos, o prazo máximo para a retirada da
-mercadoria apreendida, que contará a partir da data e horário da apreensão, será:
-a) Hortifrutigranjeiros (exceto verduras): 24 (vinte e quatro) horas;
-b) Verduras: 12 (doze) horas;
-c) Flores: 12 (doze) horas;
-d) Grãos: 24 (vinte e quatro) horas;
-e) Pescados: 24 (vinte e quatro) horas armazenados em câmara (resfriados/congelados);
+doação de cotas sociais para cônjuge, companheiro(a), ascendente ou descendente
+direto, mediante apresentação de Termo de Doação ou disposição específica na própria
+alteração contratual;
+d) doação dos direitos de uso por parte de produtores rurais, MEI, EIRELI, Limitada
+Unipessoal e firma individual, para cônjuge, companheiro(a), ascendente ou
+descendente direto, mediante apresentação de Termo de Doação;
+e) sucessão por herança mediante apresentação de alvará judicial ou formal de partilha
+transitado em julgado, referente às cotas societárias;
 f)
-Produtos Atípicos perecíveis: 01 (uma) hora;
-g) Produtos Atípicos não perecíveis: 24 (vinte e quatro) horas;
-h) Produtos ligados à floricultura: 24 (vinte e quatro) horas;
+sucessão por herança em caso de produtores rurais, MEI e firma individual mediante
+apresentação de alvará judicial ou formal de partilha transitado em julgado, podendo, em
+caso de produtores rurais, substituir o alvará judicial ou formal de partilha por Termo de
+Doação assinado por todos os herdeiros;
+g) inclusão e/ou exclusão de um ou mais produtores no CCRU/TPRU sendo cônjuge,
+companheiro(a) com união estável reconhecida judicialmente/extrajudicialmente,
+ascendente ou descendente direto, desde que mantenha o CNPJ primitivo;
+h) alteração de matriz para filial e de filial para matriz;
 i)
-Aparelhos eletrônicos, móveis ou utensílios: 15 (quinze) dias úteis.
+alteração total ou parcial do quadro societário ou da composição das cotas da sociedade
+de empresa;
+alteração da razão social por solicitação do concessionário/permissionário, desde que
+mantenha o CNPJ primitivo;
+transformação de tipo de concessionário/permissionário, desde que mantenha o CNPJ
+primitivo, exceto para produtor rural para o qual a alteração do CNPJ será aceita;
+inclusão e/ou exclusão de 1 (um) ou mais produtor no CCRU/TPRU, mantendo-se o
+CNPJ primitivo;
+fusão de sociedades entre concessionários/permissionários desde que mantido o quadro
+societário da empresa concessionaria/permissionária e com previsão editalícia e
+contratual;
+cisão de sociedade desde que mantido o CNPJ primitivo e com previsão editalícia e
+contratual;
+incorporação de empresas desde que a empresa concessionária/permissionária seja a
+incorporadora e com previsão editalícia e contratual.
 """
 ,
 """
-As mercadorias perecíveis não retiradas pelo proprietário no prazo determinado serão
-consideradas abandonadas e, portanto, encaminhadas ao Banco de Alimentos da
-CEAGESP.
+Será considerada regular e permitida a substituição do CNPJ primitivo por outro CNPJ no
+Instrumento Contratual somente quando se tratar de alterações cadastrais previstas na alínea
+“d” e “f” acima, condicionada ao cumprimento das formalidades exigidas
+
+"""
+
+,
+"""
+As alterações da razão social por modificação do regime da empresa para enquadramento ou
+desenquadramento no regime de ME e EPP serão motivo de comunicação formal à
+CEAGESP e estarão isentas de taxas.
 """
 ,
 """
-As mercadorias não perecíveis e/ou utensílios não retirados no prazo determinado serão
-considerados abandonados e, portanto, propriedade da CEAGESP que deliberará sobre a
-sua destinação, podendo integrar o patrimônio da Companhia, serem leiloados ou doados a
-entidades públicas.
+Para a alteração cadastral a CEAGESP fornecerá ao concessionário/permissionário
+interessado o formulário Pedido de Alteração Cadastral para preenchimento e assinatura de
+todos os envolvidos, com reconhecimento das firmas em cartório, e a relação dos documentos
+exigidos, observando o estabelecido para cada situação.
 """
 ,
 """
-No encerramento da AU, se constatadas benfeitorias realizadas na área, estas serão
-incorporadas ao patrimônio da CEAGESP não cabendo ao autorizatário direito à retenção,
-indenização ou compensação.
+Para o recebimento do Pedido de Alteração Cadastral a CEAGESP verificará se todos os
+documentos exigidos foram apresentados.
 """
 ,
 """
-Não será permitido o uso parcial de áreas em regime de AU.
+Deferido o processo, ao concessionário/permissionário solicitante da alteração cadastral a
+CEAGESP cobrará para cada área outorgada o equivalente a:
+a) 7,12 (sete vírgula doze) UFESPs para Produtores, Empresas Individuais, MEI, EIRELI e
+Empresas Limitadas;
+b) 15,2 (quinze vírgula duas) UFESPs para Sociedade Anônima e Empresa Pública; e,
+c)
+7,79 (sete vírgula setenta e nove) UFESPs para Cooperativas, Sindicato e Associação.
 """
 ,
 
 """
-A autorização concedida para uso de áreas da CEAGESP em regime de AU é pessoal e
-intransferível ficando, portanto, proibido ceder ou transferir a terceiros. Na inobservância
-desta regra a autorização será cancelada e o autorizatário ficará impedido de utilizar outra
-área nesta modalidade.
+Em decorrência da alteração cadastral solicitada, havendo a necessidade de emissão de novo
+Instrumento Contratual, a CEAGESP cobrará para cada área outorgada:
+a) 1 (uma) taxa administrativa de 7,12 (sete vírgula doze) UFESPs para Produtores,
+Empresas Individuais, MEI, EIRELI e Empresas Limitadas;
+b) 1 (uma) taxa administrativa de 15,2 (quinze vírgula duas) UFESPs para Sociedade
+Anônima e Empresa Pública; e,
+c)
+1 (uma) taxa administrativa de 7,79 (sete vírgula setenta e nove) UFESPs para
+Cooperativas, Sindicato e Associação.
+
 """
 ,
 """
-Para o desenvolvimento de suas atividades, os autorizatários estão sujeitos as mesmas
-condições estabelecidas no presente Regulamento para os concessionários e
-permissionários dos Entrepostos.
+As alterações cadastrais descritas nas alíneas “a” à “g” no item 2 acima estão isentas da taxa
+de alteração cadastral, permanecendo a cobrança da taxa para emissão de novo
+CCRU/TPRU.
+"""
+,
+"""
+Nos termos do item 7, havendo alterações cadastrais simultâneas, os valores cobrados serão
+calculados sobre cada alteração cadastral efetuada, para cada área outorgada.
+"""
+,
+"""
+A taxa administrativa de que trata o item 8 acima não será cobrada para as alterações
+cadastrais em que a emissão de novo CCRU/TPRU não seja necessária.
+"""
+,
+
+"""
+As alterações realizadas em desconformidade com a minuta de alteração contratual
+apresentada serão motivo de cobrança de taxa administrativa correspondente a 25 (vinte e
+cinco) UFESPs para cada área outorgada do ETSP ou de 15 (quinze) UFESPs para cada
+área outorgada dos Entrepostos do Interior, caso seja necessária a reemissão de
+CCRU/TPRU.
+"""
+,
+
 """
 
+O DEPEC e o DEINT realizarão a verificação da situação cadastral dos concessionários/
+permissionários do ETSP ou FRISP e Entrepostos do Interior, respectivamente, para fins de
+regularização do cadastro.
+"""
+,
+
+"""
+As alterações cadastrais realizadas em descumprimento ao estabelecido no presente
+regulamento serão motivo de aplicação de multa equivalente a 1 (uma) vez o valor do maior
+CCRU/TPRU por cada alteração cadastral não comunicada e emissão de comunicado ao
+concessionário/permissionário para a formalização do pedido de alteração cadastral no prazo
+de 15 (quinze) dias corridos, a partir do seu recebimento.
+"""
+,
+"""
+Decorrido o prazo concedido e não sendo comprovada a regularização da alteração cadastral,
+a(s) área(s) de comercialização será(ão) interditada(s), assim permanecendo por até 10 (dez)
+dias corridos. Mantida a irregularidade, o(s) CCRU/TPRU(s) será(ão) cancelado(s) e a(s)
+área(s) disponibilizada(s) para licitação.
+"""
+,
+"""
+Na hipótese dos prazos acima não serem cumpridos por motivos excepcionais e devidamente
+justificados e comprovados como, por exemplo, falecimento, doença grave, dentre outros,
+caberá ao DEPEC e DEINT deliberarem pela prorrogação em conformidade com a situação
+apresentada.
+"""
+,
+"""
+Após o protocolo do pedido de alteração cadastral até a assinatura do CCRU/TPRU, havendo
+interesse no cancelamento da alteração, será exigida solicitação formal dos interessados com
+assinatura de todos os envolvidos e reconhecimento das firmas. Neste caso, a cobrança da
+taxa administrativa será mantida.
+"""
+,
+"""
+O objeto social dos concessionários/permissionários deverá, obrigatoriamente, estar em
+conformidade com a atividade permitida para o setor de comercialização na CEAGESP.
+"""
+,
+
+"""
+Todos os documentos que instruem os processos devem, obrigatoriamente, ser autenticados
+por cartório ou por conferência mediante apresentação das originais com assinatura e
+carimbo do funcionário da CEAGESP.
+"""
+,
+"""
+As alterações cadastrais de contratos oriundos de procedimento licitatório somente serão
+aceitas se apresentada toda a documentação exigida na licitação e comprovadas as
+condições de habilitação.
+"""
+,
+
+"""
+Os casos de alteração cadastral não previstos no presente regulamento serão analisados pela
+CEAGESP para fins de definição da documentação exigida e cobrança de taxas
+administrativas.
+"""
 
 ]
 d = 1
@@ -145,7 +198,7 @@ for x in data:
 		iten_sub=str(d),
 		tag="Descrição",
 		description= x.replace('\n', ''),
-		norm_iten_id= 15
+		norm_iten_id= 20
 		)
 	#print(norm_iten)
 	d+=1
