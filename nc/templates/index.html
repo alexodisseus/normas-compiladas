@@ -35,9 +35,33 @@
     
     {%else:%}
     <li class="stories__story">
-      nada
-    </li>
+      <a class="stories__img-wrapper">
+        <figure>
+          <img src="{{url_for('static', filename='img/icone.png')}}" alt="Icone tarefa">
+        </figure>
+      </a>
+      <div class="stories__text sz3-text-component sz3-line-height-md sz3-text-gap-2xs">
+        <h4 class="stories__headline">
+          <a href="#">Nada</a>
+        </h4>
+        <p class="stories__metadata">
+          <time datetime="2020-05-10">Maio   10, 2020</time> 
+          <span class="stories__separator" role="separator"></span> 
+          <a href="#">nada</a>
+        </p>
+      </div>
+    </li>  
     {%endif%}
+    <li class="stories__story justify-content-center">
+      <a href="{{url_for('admin.create_task')}}">
+
+            
+          <span class="badge">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path d="M12.75 7.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5v-3.5Z"></path><path d="M12 1c6.075 0 11 4.925 11 11s-4.925 11-11 11S1 18.075 1 12 5.925 1 12 1ZM2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5 9.5 9.5 0 0 0 2.5 12Z"></path></svg>
+          </span>
+          
+          </a>
+    </li>
 
 
   </ol>
@@ -46,6 +70,3 @@
 {% endblock %}
 
 
-{% block content2 %}
-<h1>asdsçlfmsçdlmf</h1>
-{% endblock %}

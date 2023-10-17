@@ -23,18 +23,18 @@
         <circle cx="26.171" cy="78.611" r="1.473" opacity=".5"></circle>
         <circle cx="49.473" cy="9.847" r="1.473" opacity=".5"></circle>
         <circle cx="10.283" cy="63" r="2.946" opacity=".2"></circle>
-        <path opacity=".4" d="M59.948 88.142l10.558-3.603-4.888-4.455-5.67 8.058z"></path>
+        <path opacity=".4" d="M59.948 88.142l10.558-3.603-4.888-4.455-5.67 8.058z"></path>  
         <path opacity=".3" d="M18.512 19.236l5.667 1.456.519-8.738-6.186 7.282z"></path>
       </g>
     </svg>
 
     <div>
-      <h1 class="cd-margin-bottom-xs">Thank you!</h1>
-        <p class="thank-you__paragraph cd-margin-bottom-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+      <h3 class="cd-margin-bottom-xs">{{data.title}}</h3>
+        <p class="thank-you__paragraph cd-margin-bottom-xs">descrição dessa tarefa</p>
 
-        <p><a class="cd-link" href="#0">Continue shopping →</a></p>
+        <p><a class="cd-link" href="#0">{{data.status}}</a></p>
         {%if data:%}
-        <p><a class="cd-link" href="#0">{{data.title}}</a></p>
+        <p><a class="cd-link" href="#0">{{data}}</a></p>
         {%endif%}
     </div>
   </div>
@@ -42,7 +42,3 @@
 </div>
 {% endblock %}
 
-
-{% block content2 %}
-<P>vvvvvv</P>
-{% endblock %}
